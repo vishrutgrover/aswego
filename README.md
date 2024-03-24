@@ -15,5 +15,14 @@ MapMyWorld is a user-friendly website powered by HERE Services, offering guided 
 
 This chatbot enables users to interact naturally with the map, asking questions, seeking recommendations, and receiving real-time information about nearby attractions.  
 
-Additionally, the chatbot provides transportation suggestions, streamlining the journey for users and ensuring they make the most of their time in the city. Also, accounting for any detours that might occur during the journey. 
+Additionally, the chatbot provides transportation suggestions, streamlining the journey for users and ensuring they make the most of their time in the city. Also, accounting for any detours that might occur during the journey.
 
+<hr>
+
+## 🥳 Run the application
+
+Download the zip file from code.
+
+Run the index.html file!
+
+<hr>
