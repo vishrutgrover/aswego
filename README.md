@@ -1,4 +1,4 @@
-# <h1 class="logo">MapMy<span>World</span></h1>
+<h1 class="logo">MapMy<span>World</span></h1>
 An LLM which helps you navigate through the map!
 
 
