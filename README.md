@@ -1,7 +1,7 @@
 #  <h1 class="logo">🌍 MapMy<span>World</span></h1>
 <h2>An LLM which helps you navigate through the map!</h2>
 
-Project Name: MapMyWorld
+Project Name: AsWeGo
 <br>
 Team Name: Hexxit
 <hr>
