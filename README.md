@@ -30,8 +30,5 @@ Run the index.html file!
 ## Snippets
 <img width="1512" alt="Screenshot 2024-03-24 at 9 51 37 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/b6b0bb4a-0e38-4906-964a-331aafa05563">
 <img width="1512" alt="Screenshot 2024-03-24 at 9 51 41 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/3094e14e-206c-4dbf-9fc1-c46c2c262f35">
-<img width="1512" alt="Screenshot 2024-03-24 at 9 51 46 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/7afbad2b-096d-458c-915f-c4bfecdd5544">
 <img width="1512" alt="Screenshot 2024-03-24 at 9 51 58 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/a4e0284e-a025-42ec-bce3-c597037829a9">
-<img width="1512" alt="Screenshot 2024-03-24 at 9 51 52 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/1d04989e-1a4c-46c5-a3a4-a10ce067a2bc">
-<img width="1512" alt="Screenshot 2024-03-24 at 9 52 05 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/b1f9da0b-8b88-47b5-a03a-efe0d4fb1889">
 <img width="1512" alt="Screenshot 2024-03-24 at 9 54 34 PM" src="https://github.com/vishrutgrover/aswego/assets/10181816/08da8f89-3394-4bac-be2b-1a48cd8a7315">
