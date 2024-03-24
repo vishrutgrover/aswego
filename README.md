@@ -5,7 +5,7 @@ Project Name: AsWeGo
 <br>
 Team Name: Hexxit
 <hr>
-MapMyWorld is a user-friendly website powered by HERE Services, offering guided tours, historical insights, and interactive maps for tourists exploring a city.   
+AsWeGo is a user-friendly website powered by HERE Services, offering guided tours, historical insights, and interactive maps for tourists exploring a city.   
 
 This chatbot enables users to interact naturally with the map, asking questions, seeking recommendations, and receiving real-time information about nearby attractions.  
 
