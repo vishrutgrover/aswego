@@ -1,3 +1,9 @@
+<style>
+  .markdown-body h2 {
+    text-decoration: none;
+}
+</style>
+
 #  <h1 class="logo">🌍 MapMy<span>World</span></h1>
 <h2>An LLM which helps you navigate through the map!</h2>
 
@@ -19,7 +25,7 @@ Our innovative approach includes the integration of a Language Learning Model (L
 
 <hr>
 
-This was designed for the HEREvolution Codefest-Hackathon
+This project was designed for the HEREvolution Codefest-Hackathon!
 
 <hr>
 
