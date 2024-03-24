@@ -1,16 +1,13 @@
-# mapmyworld
+# <h1 class="logo">MapMy<span>World</span></h1>
 An LLM which helps you navigate through the map!
 
-Include a README.md file with the following:
 
-Project name
-Description of the project
 Instructions to run the project
 Special considerations, if any
 
+<hr>
 Project Name: MapMyWorld
 <hr>
-
 Team Name: Hexxit
 <hr>
 
