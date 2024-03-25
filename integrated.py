@@ -2,11 +2,12 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 from openai import OpenAI
 import requests, json, datetime, flexpolyline
 from functools import reduce
+import os
 
 
 
 app = Flask(__name__)
-openai_api_key = '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'
+openai_api_key = os.getenv("MY_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 
 HERE_API_KEY = "9NG7mhhWwajOpKKRkizvWwswP58ceCRMoIeQXoRjjlM"
