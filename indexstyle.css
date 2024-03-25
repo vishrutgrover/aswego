@@ -227,7 +227,7 @@ section .container {
 .journey-text {
   font-weight: 600;
   font-size: 3rem; /* Increase font size */
-  color: #fff; /* Match the color of the first column content */
+  color: white; /* Match the color of the first column content */
   text-decoration: none;
   transition: font-size 0.2s ease;
   /* Remove underline */
