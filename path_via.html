@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path with Stops</title>
+    <style>
+        /* Specify the size of the map container */
+        #map {
+            width: 100%;
+            height: 650px;
+        }
+    </style>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/path_via.js') }}"></script>
+</head>
+<body>
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Include the HERE Maps API JavaScript files -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+
+    <script>
+        
+        // Initialize a map
+        var platform = new H.service.Platform({
+            apikey: 'JRo2rEIRPPC3ZzqqBMiJ9PjEg8oG1qD67P08byN1fIM'
+        });
+
+        var defaultLayers = platform.createDefaultLayers();
+        var map = new H.Map(document.getElementById('map'),
+            defaultLayers.vector.normal.map, {
+                center: { lat: 0, lng: 0 },
+                zoom: 2,
+                pixelRatio: window.devicePixelRatio || 1
+            });
+
+        // Add behavior to the map
+        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+        // Create the default UI components
+        var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+        var locations = '{{ locations | tojson }}';
+        var lS = '{{ singled_polyline | tojson }}';
+        console.log(lS)
+        console.log(locations)
+        console.log("-----------");
+        console.log(locations);
+        searchLocations(locations);
+        
+        var pointlist = lS.substring(1).split("|");
+        var lineString = new H.geo.LineString();
+
+        for (var i=0;i<pointlist.length;i++){
+            var latlong = pointlist[i].trim("\"").split(',');
+            var la = parseFloat(latlong[0]);
+            var lo = parseFloat(latlong[1]);
+            lineString.pushPoint({lat:la,lng:lo});
+        }
+        var polyline = new H.map.Polyline(lineString, { style: { lineWidth: 5 }});
+        map.addObject(polyline);
+
+       
+    </script>
+</body>
+</html>

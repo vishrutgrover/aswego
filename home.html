@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <title>Location Search</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/homestyle.css')}}" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+          <a href="http://127.0.0.1:5500/bitsprojfinal/index.html"><h1 class="logo">MapMy<span>World</span></h1></a>
+          <div class="logo">
+            <div class="links">
+            <a href="http://127.0.0.1:5500/bitsprojfinal/webpage.html">ChatBot</a>
+            <a href="http://127.0.0.1:5500/bitsprojfinal/home.html">Detours</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+    <!-- <div class="chat-container">
+        <div class="input-output">
+          <div class="output" id="outputWindow">
+            <p>Write something!</p>
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Say Something!" id="inputText" />
+            <button id="submitButton">Submit</button>
+          </div>
+        </div>
+        <div class="mapcontainer" id="map"></div>
+      </div> -->
+
+    <div class="chat-container">
+      <div class="input-output">
+        <div class="output">
+        <h1 align="center">Location Search</h1>
+        <form action="/location" method="POST">
+          <div class="input">
+            <h2><label for="current-location-input">Current Location </label></h2>
+            <input class = "writes" type="text" id="current-location-input" name="current-location-input" placeholder="Enter current location" required>
+            <h2><label for="destination-location-input">Destination Location </label></h2>
+            <input type="text" id="destination-location-input" name="destination-location-input" placeholder="Enter destination location" required>
+            <div style="padding-top: 2rem;">
+              <button type="submit" id="submitButton"><h2>Search</h2></button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="mapcontainer" id="map"></div>
+    </div>
+    <script>
+        // Initialize a map
+        var platform = new H.service.Platform({
+            apikey: 'JRo2rEIRPPC3ZzqqBMiJ9PjEg8oG1qD67P08byN1fIM'
+        });
+
+        var defaultLayers = platform.createDefaultLayers();
+        map = new H.Map(document.getElementById('map'),
+            defaultLayers.vector.normal.map, {
+                center: {lat: 0, lng: 0},
+                zoom: 2,
+                pixelRatio: window.devicePixelRatio || 1
+            });
+
+        // Add behavior to the map
+        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+    </script>
+</body>
+</html>

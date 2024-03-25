@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Search and Zoom</title>
+    <script type="text/javascript" src="{{url_for('static',filename='script/geocoding.js')}}"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/homestyle.css')}}" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+          <a href="http://127.0.0.1:5500/bitsprojfinal/index.html"><h1 class="logo">MapMy<span>World</span></h1></a>
+          <div class="logo">
+            <div class="links">
+            <a href="http://127.0.0.1:5500/bitsprojfinal/webpage.html">ChatBot</a>
+            <a href="http://127.0.0.1:5500/bitsprojfinal/home.html">Detours</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="chat-container">
+        <div class="input-output">
+            <div class="output">
+                <h2>Enter Stops Between Current Location and Destination</h2>
+                <br>
+                <form id="stops-form" action="{{ url_for('findPath') }}" method="POST">
+                    <div class="input">
+                    <label for="current-location-input">Current Location:</label>
+                    <br>
+                    <input type="text" id="current-location-input" name="current-location-input" value="{{ current_location }}" readonly>
+                    <br>
+                    <label for="destination-location-input">Destination Location:</label>
+                    <br>
+                    <input type="text" id="destination-location-input" name="destination-location-input" value="{{ destination_location }}" readonly>
+                    <br>
+                    <label for="stop-count">Number of Stops:</label>
+                    <br>
+                    <select id="stop-count" name="stop-count">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <br>
+                    <div id="stops-inputs">
+                        <!-- Stops input fields will be added dynamically based on the selected number of stops -->
+                    </div>
+                    <div style="padding-top: 2rem;">
+                        <button type="submit">Submit</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        
+    </div>
+    <div class="mapcontainer" id="map"></div>
+    <script>
+        // Function to dynamically generate input fields for stop names based on the selected number of stops
+        document.getElementById('stop-count').addEventListener('change', function() {
+        var stopCount = parseInt(this.value);
+        var stopsInputs = document.getElementById('stops-inputs');
+        stopsInputs.innerHTML = ''; // Clear existing inputs
+
+        for (var i = 0; i < stopCount; i++) {
+            var container = document.createElement('div'); // Create a div container
+            var label = document.createElement('label');
+            label.textContent = 'Stop ' + (i + 1);
+            var input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'stop-' + (i + 1);
+            input.required = true;
+            container.appendChild(label);
+            container.appendChild(input);
+            stopsInputs.appendChild(container); // Append the container instead of the label and input directly
+            stopsInputs.appendChild(document.createElement('br'));
+        }
+    });
+    </script>
+
+<!-- Map container -->
+
+
+
+    <!-- Include the HERE Maps API JavaScript files -->
+
+    
+    <!-- Include the zoom.js and location_search.js files -->
+    
+
+    <script>
+        // Initialize a map
+        var platform = new H.service.Platform({
+            apikey: 'JRo2rEIRPPC3ZzqqBMiJ9PjEg8oG1qD67P08byN1fIM'
+        });
+
+        var defaultLayers = platform.createDefaultLayers();
+        map = new H.Map(document.getElementById('map'),
+            defaultLayers.vector.normal.map, {
+                center: {lat: 20.5937, lng: 78.9629 },
+                zoom: 2,
+                pixelRatio: window.devicePixelRatio || 1
+            });
+
+        // Add behavior to the map
+        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+        // Create the default UI components
+        var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+        // Event listener for the location search form submission
+
+        searchLocation('{{current_location}}', '{{destination_location}}')
+        
+    </script>
+</body>
+</html>
