@@ -47,7 +47,7 @@ Download the zip file from code.
 Run the index.html file!
 
 ## Snippets
-<img width="1512" alt="Home Page" src="https://github.com/vishrutgrover/aswego/assets/10181816/b6b0bb4a-0e38-4906-964a-331aafa05563">
-<img width="1512" alt="ChatBot Implementation" src="https://github.com/vishrutgrover/aswego/assets/10181816/3094e14e-206c-4dbf-9fc1-c46c2c262f35">
-<img width="1512" alt="Location Search" src="https://github.com/vishrutgrover/aswego/assets/10181816/a4e0284e-a025-42ec-bce3-c597037829a9">
-<img width="1512" alt="Detour Estimation" src="https://github.com/vishrutgrover/aswego/assets/10181816/08da8f89-3394-4bac-be2b-1a48cd8a7315">
+<img width="1512" alt="Home Page" src="https://github.com/vishrutgrover/aswego/assets/10181816/e11ac8de-46c6-4906-bd8c-a31b65b5b4af">
+<img width="1512" alt="Navigating to ChatBot" src="https://github.com/vishrutgrover/aswego/assets/10181816/d0bb962d-881d-46e4-a478-82e90861ec6b">
+<img width="1512" alt="ChatBot" src="https://github.com/vishrutgrover/aswego/assets/10181816/a4e0284e-a025-42ec-bce3-c597037829a9">
+<img width="1512" alt="Detour Estimation" src="https://github.com/vishrutgrover/aswego/assets/10181816/2e97b827-804d-4c77-af0b-5e8fa011fc6e">
