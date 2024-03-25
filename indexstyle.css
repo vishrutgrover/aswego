@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes transitionIn {
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  animation: transitionIn 0.75s;
+}
+
+.container {
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 25;
+}
+
+.mountain1 {
+  position: absolute;
+  bottom: -100px;
+  width: 1500px;
+  right: 0;
+  z-index: 19;
+}
+
+.person {
+  position: absolute;
+  width: 650px;
+  bottom: -100px;
+  left: -70px;
+  z-index: 20;
+}
+
+.mountain2 {
+  position: absolute;
+  width: 1100px;
+  bottom: -120px;
+  left: 0;
+  z-index: 18;
+}
+
+.mountain3 {
+  position: absolute;
+  width: 900px;
+  bottom: 100px;
+  right: 0;
+  z-index: 17;
+}
+
+.sky {
+  position: absolute;
+  width: 2100px;
+  bottom: 130px;
+  right: 0;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 30;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.big-title {
+  position: absolute;
+  z-index: 30;
+  line-height: 4rem;
+  top: calc(50% - 2rem);
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+section {
+  width: 100%;
+  background-color: #151515;
+  position: relative;
+}
+
+section .container {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section img {
+  width: 100%;
+}
+
+section .container > * {
+  margin: 2rem;
+}
+
+.content {
+  color: #fff;
+  transform: translateY(-50px);
+}
+
+.imgContainer {
+  transform: translateY(50px);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.border {
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 100%;
+  height: 300px;
+  width: 100%;
+  left: 0;
+  z-index: 30;
+  background: linear-gradient(to top, #151515, transparent);
+}
+
+.opacity {
+  opacity: 0;
+}
+
+@media (max-width: 850px) {
+  section .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .big-title {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+section .container {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Or adjust based on your layout needs */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Styling the new journey link */
+.journeyLink {
+  text-align: center; /* Center align the link within its container */
+  transform: translateY(20px); /* Adjust based on your design needs */
+}
+
+.journey-text {
+  font-weight: 600;
+  font-size: 3rem; /* Increase font size */
+  color: #fff; /* Match the color of the first column content */
+  text-decoration: none;
+  transition: font-size 0.2s ease;
+  /* Remove underline */
+}
+
+.journey-text:hover {
+  color: rgb(149, 146, 146);
+  font-size: 3.2rem; /* Or any other hover effect you prefer */
+}
