@@ -46,9 +46,17 @@ Download the zip file from code.
 
 Run the index.html file!
 
-## Working Demo
+## Documentation
 
-Video: https://drive.google.com/file/d/1lr5SaHHOkxpvLLAsnMjq20N97jVp7Ynm/view?usp=sharing
+https://1drv.ms/w/s!Aj6wi3Yi1PaC4WFwZ4gx1WNsAXQI?e=tezDdv
+
+## Video Demo
+
+https://drive.google.com/file/d/1lr5SaHHOkxpvLLAsnMjq20N97jVp7Ynm/view?usp=sharing
+
+## Working Site Link
+
+https://aswego.aimsdtu.live/
 
 ## Snippets
 <img width="1512" alt="Home Page" src="https://github.com/vishrutgrover/aswego/assets/10181816/e11ac8de-46c6-4906-bd8c-a31b65b5b4af">
