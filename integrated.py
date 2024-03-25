@@ -74,11 +74,11 @@ def home():
         print(messages)
 
         # Pass messages list to the template for rendering
-        return render_template('webpage.html', messages=messages)
+        return render_template('/webpage.html', messages=messages)
     else:
         
         # Render the template even for GET requests
-        return render_template('webpage.html', messages=[], initial_message=initial_message)
+        return render_template('/webpage.html', messages=[], initial_message=initial_message)
     
 @app.route('/location', methods=['GET', 'POST'])
 def index():
@@ -93,7 +93,7 @@ def index():
         return redirect(url_for('findPath', Cl=current_location, Dl=destination_location))
         
     print("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
-    return render_template('home.html')
+    return render_template('/home.html')
 
 @app.route('/path',  methods=['GET', 'POST'])
 def findPath():
@@ -113,7 +113,7 @@ def findPath():
         return redirect(url_for('completePath', Cl=current_location, Dl=destination_location, stop_count=stop_count, stops=stops_str))
     
     print("--3--")
-    return render_template('path.html', current_location=current_location, destination_location=destination_location)
+    return render_template('/path.html', current_location=current_location, destination_location=destination_location)
 
 
 @app.route('/path/via', methods=['GET', 'POST'])
@@ -173,7 +173,7 @@ def completePoly():
     locstring = locstring.replace("|",",")
     print(locstring)
     out = "|".join([str(sc[0])+","+str(sc[1]) for sc in singled_polyline_coords])
-    return render_template('path_via.html',locations=locstring , singled_polyline=out)
+    return render_template('/path_via.html',locations=locstring , singled_polyline=out)
     
 
 
