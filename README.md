@@ -46,6 +46,10 @@ Download the zip file from code.
 
 Run the index.html file!
 
+## Working Demo
+
+Video: https://drive.google.com/file/d/1lr5SaHHOkxpvLLAsnMjq20N97jVp7Ynm/view?usp=sharing
+
 ## Snippets
 <img width="1512" alt="Home Page" src="https://github.com/vishrutgrover/aswego/assets/10181816/e11ac8de-46c6-4906-bd8c-a31b65b5b4af">
 <img width="1512" alt="Navigating to ChatBot" src="https://github.com/vishrutgrover/aswego/assets/10181816/d0bb962d-881d-46e4-a478-82e90861ec6b">
