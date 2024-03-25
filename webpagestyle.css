@@ -1,267 +1,267 @@
 body {
-    height: 100vh;
-    font-family: "helvetica", cursive;
-    font-size: 20px;
-    background-color: rgb(7, 7, 47);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-attachment: fixed; /* Fix the background image so it doesn't scroll with the content */
-    animation: transitionIn 0.75s;
+  height: 100vh;
+  font-family: "helvetica", cursive;
+  font-size: 20px;
+  background-color: rgb(7, 7, 47);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-attachment: fixed; /* Fix the background image so it doesn't scroll with the content */
+  animation: transitionIn 0.75s;
+}
+@keyframes transitionIn {
+  from{
+    opacity:0;
   }
-  @keyframes transitionIn {
-    from{
-      opacity:0;
-    }
-    to{
-      opacity:1;
-    }
+  to{
+    opacity:1;
+  }
+}
+
+a {
+  text-decoration: none;
   }
 
-  a {
-    text-decoration: none;
-    }
-
-    .links a {
-        color: white; /* Set default color */
-        transition: color 0.3s; /* Add transition for smooth color change */
-        margin-right: 50px;
-    }
-
-    .links a:hover {
-        color: grey; /* Change color on hover */
-    }
-
-  .container {
-    max-width: 70rem;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .links a {
+      color: white; /* Set default color */
+      transition: color 0.3s; /* Add transition for smooth color change */
+      margin-right: 50px;
   }
 
-  header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+  .links a:hover {
+      color: grey; /* Change color on hover */
   }
 
-  
-  header:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    z-index: 25;
-  }
+.container {
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .logo {
-    color: #fff;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-  }
-  
-  .logo span {
-    font-weight: 300;
-  }
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
-  .chat-container {
-    width: 100%;
-    height: 100%; /* Take full height of the viewport */
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-    overflow-y: auto;
-    border-radius: 10px;
-    margin: 5px;
-    z-index: 0;
-    justify-content: left;
-  }
 
-  .input-output {
-    margin: 0; /* Remove auto margin */
-    padding: 20px;
-    flex-direction: row;
-    width: 50%; /* Take full width of the chat-container */
-    height: 100%; /* Take full height */
-  }
+header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 25;
+}
 
-  .input,
-  .output {
-    border-radius: 10px;
-    /* border-color: #333; */
-    /* border: 5px groove #e6dada; */
-    width: 100%;
-    margin: auto;
-    float: left;
-    /* padding: 20px; */
-  }
+.logo {
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 
-  .output {
-    height: 90%;
-    width: 90%;
-    background-color: rgba(16, 127, 207, 0.2);
-    /* box-shadow: 10px 5px 2px 2px grey; */
-    padding: 10px;
-    display: flex;
-    color: white;
-    justify-content: start;
-    align-items: left;
-    margin-bottom: 20px;
-    overflow-y: auto;
-    flex-direction: column;
-  }
+.logo span {
+  font-weight: 300;
+}
 
-  .input {
-    height: 10%;
-    width: 95%;
-    display: flex;
-    /* background-color: #f0f0f0; */
-  }
+.chat-container {
+  width: 100%;
+  height: 100%; /* Take full height of the viewport */
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin: 5px;
+  z-index: 0;
+  justify-content: left;
+}
 
-  input[type="text"] {
-    flex: 1;
-    padding: 20px;
-  }
+.input-output {
+  margin: 0; /* Remove auto margin */
+  padding: 20px;
+  flex-direction: row;
+  width: 50%; /* Take full width of the chat-container */
+  height: 100%; /* Take full height */
+}
 
-  button[type="submit"] {
-    padding: 20px 20px;
-    color: white;
-    border: none;
-    width: 20%;
-    cursor: pointer;
-  }
+.input,
+.output {
+  border-radius: 10px;
+  /* border-color: #333; */
+  /* border: 5px groove #e6dada; */
+  width: 100%;
+  margin: auto;
+  float: left;
+  /* padding: 20px; */
+}
 
-  .input input {
-    width: 75%;
-    background-color: rgba(16, 127, 207, 0.4);
-    margin: auto;
-    height: 85%;
-    color: whitesmoke;
-    border: 1px solid #ccc;
-    /* border: 5px groove #e6dada; */
-    border-radius: 10px;
-    padding-left: 10px;
-    /* box-shadow: 5px 5px 2px 2px grey; */
-  }
+.output {
+  height: 90%;
+  width: 90%;
+  background-color: rgba(16, 127, 207, 0.2);
+  /* box-shadow: 10px 5px 2px 2px grey; */
+  padding: 10px;
+  display: flex;
+  color: white;
+  justify-content: start;
+  align-items: left;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  flex-direction: column;
+}
 
-  .input button {
-    width: 20%;
-    background-color: rgba(16, 127, 207, 0.4);
-    margin: auto;
-    height: 95%;
-    color: whitesmoke;
-    border: 1px solid #ccc;
-    /* border: 5px groove #e6dada; */
-    border-radius: 10px;
-    /* box-shadow: 5px 5px 2px 2px grey; */
-  }
+.input {
+  height: 10%;
+  width: 95%;
+  display: flex;
+  /* background-color: #f0f0f0; */
+}
 
-  .input button:hover {
-    background-color: rgba(16, 127, 207, 0.8);
-  }
-  .input input::placeholder {
-    text-align: left; /* Center the text horizontally */
-    line-height: inherit; /* Center the text vertically */
-    color: whitesmoke;
-    font-family: "Helvetica";
-    font-size: 1rem;
-    opacity: 0.7;
-  }
+input[type="text"] {
+  flex: 1;
+  padding: 20px;
+}
 
-  .map-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex; /* Add display flex */
-    justify-content: center; /* Center the map horizontally */
-    align-items: center; /* Center the map vertically */
-    border-radius: 10px;
-  }
+button[type="submit"] {
+  padding: 20px 20px;
+  color: white;
+  border: none;
+  width: 20%;
+  cursor: pointer;
+}
 
-  #map {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
+.input input {
+  width: 75%;
+  background-color: rgba(16, 127, 207, 0.4);
+  margin: auto;
+  height: 85%;
+  color: whitesmoke;
+  border: 1px solid #ccc;
+  /* border: 5px groove #e6dada; */
+  border-radius: 10px;
+  padding-left: 10px;
+  /* box-shadow: 5px 5px 2px 2px grey; */
+}
 
-  .navbar {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar li {
-    float: left;
-  }
-  
-  .navbar a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .navbar a:hover {
-    background-color: #555;
-  }
+.input button {
+  width: 20%;
+  background-color: rgba(16, 127, 207, 0.4);
+  margin: auto;
+  height: 95%;
+  color: whitesmoke;
+  border: 1px solid #ccc;
+  /* border: 5px groove #e6dada; */
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 2px 2px grey; */
+}
 
-  .message {
-    font-size: 20px;
-    font-family: 'Times New Roman';
+.input button:hover {
+  background-color: rgba(16, 127, 207, 0.8);
+}
+.input input::placeholder {
+  text-align: left; /* Center the text horizontally */
+  line-height: inherit; /* Center the text vertically */
+  color: whitesmoke;
+  font-family: "Helvetica";
+  font-size: 1rem;
+  opacity: 0.7;
+}
 
-  }
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex; /* Add display flex */
+  justify-content: center; /* Center the map horizontally */
+  align-items: center; /* Center the map vertically */
+  border-radius: 10px;
+}
 
-  .message.user {
-    /* Styles for user messages (e.g., background color, font style) */
-    background-color: #f3ebf6; /* Light blue */
-    color: black;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    opacity: 0.4;
-  }
-  
-  .message.model {
-    /* Styles for model replies (e.g., background color, font style) */
-    background-color: #f5f5f5; /* Light gray */
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    font-style: italic;
-  }
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
-  @keyframes zigzag {
-    0%,
-    100% {
-      transform: translateX(0) translateY(0);
-    }
-    25% {
-      transform: translateX(100%) translateY(25%);
-    }
-    50% {
-      transform: translateX(0) translateY(50%);
-    }
-    75% {
-      transform: translateX(100%) translateY(75%);
-    }
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.message {
+  font-size: 20px;
+  font-family: 'Times New Roman';
+
+}
+
+.message.user {
+  /* Styles for user messages (e.g., background color, font style) */
+  background-color: #f3ebf6; /* Light blue */
+  color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0.4;
+}
+
+.message.model {
+  /* Styles for model replies (e.g., background color, font style) */
+  background-color: #f5f5f5; /* Light gray */
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+@keyframes zigzag {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
   }
+  25% {
+    transform: translateX(100%) translateY(25%);
+  }
+  50% {
+    transform: translateX(0) translateY(50%);
+  }
+  75% {
+    transform: translateX(100%) translateY(75%);
+  }
+}
