@@ -37,7 +37,7 @@ Overall, AsWeGo aims to provide users with a comprehensive platform for planning
 <hr>
 
 This project was designed for the HEREvolution Codefest-Hackathon!
-We also tried hosting the website on the free hosting sites but they were not very supportive of flask and the one which were charged a lot.
+<hr> We also tried hosting the website on the free hosting sites but they were not very supportive of flask and the one which were charged a lot.</hr>
 <hr>
 
 ## 🥳 Run the application
